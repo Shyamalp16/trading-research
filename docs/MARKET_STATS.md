@@ -159,4 +159,41 @@ be profitable on 2016–2022 AND separately on 2023–2025 (test touched once).
 
 ---
 
+## NQ — Survivor diagnostics: which edges survive robustness testing? (Aug 2026)
+
+The five Discovery V1 leaders were stress-tested: parameter neighborhoods
+(27 variants each: time ±30min, stop ±25%, target 1.0–2.0R), Monte Carlo,
+year-by-year breakdowns, and drift comparisons.
+
+### Scorecard
+
+| Candidate | Neighbors profitable | E[R] range across variants | Bootstrap P(E≤0) | Verdict |
+|---|---|---|---|---|
+| **pdh_accept_90** | **100%** (all 27) | [+0.019, +0.036] — tight & positive | 6% | **most robust** |
+| **gap_rev_dn_g0.3_30** | 83% | [−0.003, +0.043] | 16% | **passes** (lumpy years) |
+| **pullback_up_90** | 67%* | [−0.006, +0.036] | **2%** — only CI excluding zero | **passes w/ notes** |
+| vwap_reclaim_90 | 33% | [−0.053, +0.053] — sign flips | 6% | fails stability |
+| mom_dn_m0.003_60 | 33% | [−0.026, +0.054] | 8% | fails stability |
+
+*pullback's losing neighbors lose only trivially (worst −0.006R); it is
+flat-everywhere-with-a-good-center, not a fragile spike.
+
+### Plain language
+
+- **Buying NQ when it accepts a break above yesterday's high with short-term
+  momentum (pdh_accept_90)** is the most dependable pattern found so far:
+  every reasonable variation of it makes money, just modestly
+  (~+0.03R per trade, ~38 trades/year).
+- **Fading gap-downs that reclaim VWAP** also survives robustness testing
+  but with lumpier year-to-year results.
+- **VWAP-reclaim and down-momentum entries look great at their exact
+  settings but break when settings change** — classic overfitting shape.
+  They are shelved, not frozen.
+- Down-momentum shorting has one intriguing property: on the days it trades,
+  simply being LONG loses money (−0.05R) while the short makes +0.04R —
+  meaning the signal carries real directional information. Worth a targeted
+  follow-up study, not live deployment.
+
+---
+
 (Entries are appended as research proceeds — newest at the bottom.)
