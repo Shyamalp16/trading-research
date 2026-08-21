@@ -1,0 +1,10 @@
+{
+  "experiment_id": "NQ-20260821T072055Z",
+  "dataset_versions": {
+    "futures_NQ.F_1m_pre2021.parquet": "e47d71f54d880e6d",
+    "NQ1m-2020-26.parquet": "b97893f9a2e4d70e"
+  },
+  "hypotheses_tested": 114,
+  "split_train_end": "2023-01-01 00:00:00",
+  "n_oos_positive": 30
+}

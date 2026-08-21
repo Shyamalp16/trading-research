@@ -122,4 +122,41 @@ Owner request: same all-session OR30 breakout, but exit at a fixed
 
 ---
 
+## NQ — Discovery V1 first screen: what survived a train/test split (Aug 2026)
+
+114 hypotheses across 9 market-structure families were screened: each had to
+be profitable on 2016–2022 AND separately on 2023–2025 (test touched once).
+
+### What looks interesting (candidate edges, NOT validated strategies)
+
+1. **VWAP pullback continuation** (best family): buy when the morning trend
+   is up, price is above VWAP but close to it (pullback), by 11:00 ET.
+   Best variant: ~700 trades over 10 years (~70/yr), +0.05R expectancy in
+   2023–2025, profit factor 1.4. Walk-forward across the whole family:
+   n=449, E[R] +0.043R, maxDD 4.8R. 8 of 12 variants positive OOS —
+   a plateau, not a spike.
+2. **VWAP reclaim**: price pushes back above VWAP with momentum → long.
+   Strong in 2023–2025 (+0.08R) but only ~24 trades/year; the whole-family
+   walk-forward was flat, so this may be regime-dependent.
+3. **Gap-down reversal**: gap down >0.3 ATR but price reclaims VWAP → long.
+   Positive both periods, moderate sample.
+
+### What died
+
+- **Overnight-position extremes with tight stops**: catastrophic
+  (E[R] −0.20R, 61R max drawdown). Extreme overnight positioning does NOT
+  mean "go with the crowd" at the open on NQ.
+- Failed-breakout entries: nothing after costs.
+- Volatility-conditioned breakouts: flat.
+
+### Honest caveats
+
+- With 114 hypotheses tested, the deflated Sharpe of every single candidate
+  is still below 0.33 — none is statistically significant on its own yet.
+- The top ideas overlap little with each other (good for a portfolio later).
+- Next steps for survivors: parameter-stability neighborhoods, Monte Carlo,
+  then freeze → one-shot holdout evaluation.
+
+---
+
 (Entries are appended as research proceeds — newest at the bottom.)
