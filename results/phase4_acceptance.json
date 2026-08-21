@@ -1,0 +1,530 @@
+{
+  "experiment_id": "NQ-20260821T070334Z",
+  "hypotheses_tested": 8,
+  "hypothesis_ids": [
+    "4483beac9a75",
+    "6328e93f1b32",
+    "b62a484ce52c",
+    "965ed282efde",
+    "509cc6133476",
+    "08cc224c38e8",
+    "7a6eccb380e5",
+    "a0bff4f3348e"
+  ],
+  "fold_history": [
+    {
+      "train_start": "2016-05-31 00:00:00",
+      "train_end": "2019-01-01 00:00:00",
+      "test_start": "2019-01-01 00:00:00",
+      "test_end": "2020-01-01 00:00:00",
+      "winner": {
+        "name": "orb_90m_long_rr2.0",
+        "market": "NQ",
+        "obs_minute": 90,
+        "direction": "long",
+        "filters": [
+          [
+            "or30_broke_up",
+            "==",
+            1
+          ],
+          [
+            "above_vwap",
+            "==",
+            1
+          ]
+        ],
+        "stop": {
+          "type": "atr",
+          "mult": 1.0
+        },
+        "target": {
+          "type": "rr",
+          "rr": 2.0
+        },
+        "time_stop_min": 240
+      },
+      "winner_train_stats": {
+        "n": 183,
+        "win_rate": 0.5355191256830601,
+        "avg_win_r": 0.27998546547870956,
+        "avg_loss_r": -0.30175854040163697,
+        "payoff_ratio": 0.9278460357942224,
+        "expectancy_r": 0.00977650099876722,
+        "profit_factor": 1.0697519000921623,
+        "total_r": 1.7890996827744015,
+        "max_dd_r": 4.313929024020611,
+        "avg_dd_r": 1.2924555297047284,
+        "max_losing_streak": 9,
+        "sharpe_trade": 0.025471106359560267,
+        "sortino_trade": 0.037985167316027336,
+        "pct_negative_months_placeholder": NaN
+      },
+      "test_stats": {
+        "n": 79,
+        "win_rate": 0.5063291139240507,
+        "avg_win_r": 0.2319174727926972,
+        "avg_loss_r": -0.24911244061879267,
+        "payoff_ratio": 0.9309750738125188,
+        "expectancy_r": -0.005552990790190241,
+        "profit_factor": 0.9548462295513012,
+        "total_r": -0.43868627242502906,
+        "max_dd_r": 5.261706869761639,
+        "avg_dd_r": 1.705484359099709,
+        "max_losing_streak": 5,
+        "sharpe_trade": -0.01598820440452788,
+        "sortino_trade": -0.019316853197606874,
+        "pct_negative_months_placeholder": NaN
+      }
+    },
+    {
+      "train_start": "2016-05-31 00:00:00",
+      "train_end": "2020-01-01 00:00:00",
+      "test_start": "2020-01-01 00:00:00",
+      "test_end": "2021-01-01 00:00:00",
+      "winner": {
+        "name": "orb_90m_long_rr2.0",
+        "market": "NQ",
+        "obs_minute": 90,
+        "direction": "long",
+        "filters": [
+          [
+            "or30_broke_up",
+            "==",
+            1
+          ],
+          [
+            "above_vwap",
+            "==",
+            1
+          ]
+        ],
+        "stop": {
+          "type": "atr",
+          "mult": 1.0
+        },
+        "target": {
+          "type": "rr",
+          "rr": 2.0
+        },
+        "time_stop_min": 240
+      },
+      "winner_train_stats": {
+        "n": 262,
+        "win_rate": 0.5267175572519084,
+        "avg_win_r": 0.26605271397551766,
+        "avg_loss_r": -0.2852004928892908,
+        "payoff_ratio": 0.9328620412966611,
+        "expectancy_r": 0.005154249657822036,
+        "profit_factor": 1.0381851749914452,
+        "total_r": 1.3504134103493735,
+        "max_dd_r": 5.261706869761638,
+        "avg_dd_r": 1.4578059435720006,
+        "max_losing_streak": 9,
+        "sharpe_trade": 0.013808692921894747,
+        "sortino_trade": 0.019209154964951947,
+        "pct_negative_months_placeholder": NaN
+      },
+      "test_stats": {
+        "n": 77,
+        "win_rate": 0.5714285714285714,
+        "avg_win_r": 0.2528632275161718,
+        "avg_loss_r": -0.29908176186306856,
+        "payoff_ratio": 0.8454652197479784,
+        "expectancy_r": 0.016315374925068817,
+        "profit_factor": 1.1272869596639714,
+        "total_r": 1.2562838692302989,
+        "max_dd_r": 3.122498040974534,
+        "avg_dd_r": 1.64129585992601,
+        "max_losing_streak": 4,
+        "sharpe_trade": 0.04656811713477791,
+        "sortino_trade": 0.05804208353319627,
+        "pct_negative_months_placeholder": NaN
+      }
+    },
+    {
+      "train_start": "2016-05-31 00:00:00",
+      "train_end": "2021-01-01 00:00:00",
+      "test_start": "2021-01-01 00:00:00",
+      "test_end": "2022-01-01 00:00:00",
+      "winner": {
+        "name": "orb_30m_long_rr1.0",
+        "market": "NQ",
+        "obs_minute": 30,
+        "direction": "long",
+        "filters": [
+          [
+            "or30_broke_up",
+            "==",
+            1
+          ],
+          [
+            "above_vwap",
+            "==",
+            1
+          ]
+        ],
+        "stop": {
+          "type": "atr",
+          "mult": 1.0
+        },
+        "target": {
+          "type": "rr",
+          "rr": 1.0
+        },
+        "time_stop_min": 240
+      },
+      "winner_train_stats": {
+        "n": 51,
+        "win_rate": 0.5294117647058824,
+        "avg_win_r": 0.2972089582481147,
+        "avg_loss_r": -0.23889837535481914,
+        "payoff_ratio": 1.2440811194579742,
+        "expectancy_r": 0.044923154199675255,
+        "profit_factor": 1.399591259390221,
+        "total_r": 2.291080864183438,
+        "max_dd_r": 1.2225079885517296,
+        "avg_dd_r": 0.5572357736235529,
+        "max_losing_streak": 4,
+        "sharpe_trade": 0.1352082290962153,
+        "sortino_trade": 0.21566730838775575,
+        "pct_negative_months_placeholder": NaN
+      },
+      "test_stats": {
+        "n": 18,
+        "win_rate": 0.6666666666666666,
+        "avg_win_r": 0.27400845425744813,
+        "avg_loss_r": -0.24865881658123876,
+        "payoff_ratio": 1.101945460952226,
+        "expectancy_r": 0.09978603064455248,
+        "profit_factor": 2.203890921904452,
+        "total_r": 1.7961485516019446,
+        "max_dd_r": 0.836560196560203,
+        "avg_dd_r": 0.25942940643206075,
+        "max_losing_streak": 2,
+        "sharpe_trade": 0.3087534262075015,
+        "sortino_trade": 0.3507511031721952,
+        "pct_negative_months_placeholder": NaN
+      }
+    },
+    {
+      "train_start": "2016-05-31 00:00:00",
+      "train_end": "2022-01-01 00:00:00",
+      "test_start": "2022-01-01 00:00:00",
+      "test_end": "2023-01-01 00:00:00",
+      "winner": {
+        "name": "orb_30m_long_rr1.0",
+        "market": "NQ",
+        "obs_minute": 30,
+        "direction": "long",
+        "filters": [
+          [
+            "or30_broke_up",
+            "==",
+            1
+          ],
+          [
+            "above_vwap",
+            "==",
+            1
+          ]
+        ],
+        "stop": {
+          "type": "atr",
+          "mult": 1.0
+        },
+        "target": {
+          "type": "rr",
+          "rr": 1.0
+        },
+        "time_stop_min": 240
+      },
+      "winner_train_stats": {
+        "n": 69,
+        "win_rate": 0.5652173913043478,
+        "avg_win_r": 0.29007034163560197,
+        "avg_loss_r": -0.24085046360010307,
+        "payoff_ratio": 1.2043586601403489,
+        "expectancy_r": 0.05923520892442584,
+        "profit_factor": 1.5656662581824534,
+        "total_r": 4.087229415785383,
+        "max_dd_r": 1.2225079885517296,
+        "avg_dd_r": 0.5046817088250543,
+        "max_losing_streak": 4,
+        "sharpe_trade": 0.1790718711205151,
+        "sortino_trade": 0.2625219064754312,
+        "pct_negative_months_placeholder": NaN
+      },
+      "test_stats": {
+        "n": 12,
+        "win_rate": 0.6666666666666666,
+        "avg_win_r": 0.2625928795709093,
+        "avg_loss_r": -0.43112772324092197,
+        "payoff_ratio": 0.6090837248806839,
+        "expectancy_r": 0.03135267863363223,
+        "profit_factor": 1.2181674497613677,
+        "total_r": 0.37623214360358676,
+        "max_dd_r": 1.316414368313715,
+        "avg_dd_r": 0.9332581922045122,
+        "max_losing_streak": 2,
+        "sharpe_trade": 0.07550965605574612,
+        "sortino_trade": 0.07775479389066871,
+        "pct_negative_months_placeholder": NaN
+      }
+    },
+    {
+      "train_start": "2016-05-31 00:00:00",
+      "train_end": "2023-01-01 00:00:00",
+      "test_start": "2023-01-01 00:00:00",
+      "test_end": "2024-01-01 00:00:00",
+      "winner": {
+        "name": "orb_30m_long_rr1.0",
+        "market": "NQ",
+        "obs_minute": 30,
+        "direction": "long",
+        "filters": [
+          [
+            "or30_broke_up",
+            "==",
+            1
+          ],
+          [
+            "above_vwap",
+            "==",
+            1
+          ]
+        ],
+        "stop": {
+          "type": "atr",
+          "mult": 1.0
+        },
+        "target": {
+          "type": "rr",
+          "rr": 1.0
+        },
+        "time_stop_min": 240
+      },
+      "winner_train_stats": {
+        "n": 81,
+        "win_rate": 0.5802469135802469,
+        "avg_win_r": 0.28539332681607976,
+        "avg_loss_r": -0.2632360235578465,
+        "payoff_ratio": 1.0841727623702848,
+        "expectancy_r": 0.055104463696160115,
+        "profit_factor": 1.4987094068059819,
+        "total_r": 4.4634615593889695,
+        "max_dd_r": 1.3164143683137146,
+        "avg_dd_r": 0.5519442640189259,
+        "max_losing_streak": 4,
+        "sharpe_trade": 0.15984016100295767,
+        "sortino_trade": 0.21161200617211628,
+        "pct_negative_months_placeholder": NaN
+      },
+      "test_stats": {
+        "n": 10,
+        "win_rate": 0.6,
+        "avg_win_r": 0.44885037697435526,
+        "avg_loss_r": -0.40296808427417596,
+        "payoff_ratio": 1.113860860179094,
+        "expectancy_r": 0.10812299247494281,
+        "profit_factor": 1.6707912902686408,
+        "total_r": 1.0812299247494281,
+        "max_dd_r": 1.0044689170856278,
+        "avg_dd_r": 0.7182444511429242,
+        "max_losing_streak": 1,
+        "sharpe_trade": 0.20413616721462757,
+        "sortino_trade": 0.29152483130212187,
+        "pct_negative_months_placeholder": NaN
+      }
+    },
+    {
+      "train_start": "2016-05-31 00:00:00",
+      "train_end": "2024-01-01 00:00:00",
+      "test_start": "2024-01-01 00:00:00",
+      "test_end": "2025-01-01 00:00:00",
+      "winner": {
+        "name": "orb_30m_long_rr1.0",
+        "market": "NQ",
+        "obs_minute": 30,
+        "direction": "long",
+        "filters": [
+          [
+            "or30_broke_up",
+            "==",
+            1
+          ],
+          [
+            "above_vwap",
+            "==",
+            1
+          ]
+        ],
+        "stop": {
+          "type": "atr",
+          "mult": 1.0
+        },
+        "target": {
+          "type": "rr",
+          "rr": 1.0
+        },
+        "time_stop_min": 240
+      },
+      "winner_train_stats": {
+        "n": 91,
+        "win_rate": 0.5824175824175825,
+        "avg_win_r": 0.3038978985321109,
+        "avg_loss_r": -0.2779446615279864,
+        "payoff_ratio": 1.0933755549088366,
+        "expectancy_r": 0.0609306756498725,
+        "profit_factor": 1.5249711686886405,
+        "total_r": 5.544691484138397,
+        "max_dd_r": 1.3164143683137146,
+        "avg_dd_r": 0.5697285174100273,
+        "max_losing_streak": 4,
+        "sharpe_trade": 0.16468122654624803,
+        "sortino_trade": 0.21959220328272144,
+        "pct_negative_months_placeholder": NaN
+      },
+      "test_stats": {
+        "n": 12,
+        "win_rate": 0.6666666666666666,
+        "avg_win_r": 0.31833591352532964,
+        "avg_loss_r": -0.4161689171180388,
+        "payoff_ratio": 0.7649199650223744,
+        "expectancy_r": 0.0735009699775402,
+        "profit_factor": 1.5298399300447487,
+        "total_r": 0.8820116397304824,
+        "max_dd_r": 1.3406285171833667,
+        "avg_dd_r": 0.8886221716086352,
+        "max_losing_streak": 2,
+        "sharpe_trade": 0.17711503388947497,
+        "sortino_trade": 0.28718537796477733,
+        "pct_negative_months_placeholder": NaN
+      }
+    },
+    {
+      "train_start": "2016-05-31 00:00:00",
+      "train_end": "2025-01-01 00:00:00",
+      "test_start": "2025-01-01 00:00:00",
+      "test_end": "2026-01-01 00:00:00",
+      "winner": {
+        "name": "orb_30m_long_rr1.0",
+        "market": "NQ",
+        "obs_minute": 30,
+        "direction": "long",
+        "filters": [
+          [
+            "or30_broke_up",
+            "==",
+            1
+          ],
+          [
+            "above_vwap",
+            "==",
+            1
+          ]
+        ],
+        "stop": {
+          "type": "atr",
+          "mult": 1.0
+        },
+        "target": {
+          "type": "rr",
+          "rr": 1.0
+        },
+        "time_stop_min": 240
+      },
+      "winner_train_stats": {
+        "n": 103,
+        "win_rate": 0.5922330097087378,
+        "avg_win_r": 0.30579140869515614,
+        "avg_loss_r": -0.2911088763460866,
+        "payoff_ratio": 1.050436567010118,
+        "expectancy_r": 0.06239517595989203,
+        "profit_factor": 1.525634061609933,
+        "total_r": 6.426703123868879,
+        "max_dd_r": 1.340628517183367,
+        "avg_dd_r": 0.6095902241848533,
+        "max_losing_streak": 4,
+        "sharpe_trade": 0.16615078723074314,
+        "sortino_trade": 0.2240680275851452,
+        "pct_negative_months_placeholder": NaN
+      },
+      "test_stats": {
+        "n": 11,
+        "win_rate": 0.45454545454545453,
+        "avg_win_r": 0.3712214677656366,
+        "avg_loss_r": -0.3078524293135454,
+        "payoff_ratio": 1.2058422556333,
+        "expectancy_r": 0.0008175239042645943,
+        "profit_factor": 1.0048685463610834,
+        "total_r": 0.008992762946910537,
+        "max_dd_r": 1.0053514750217356,
+        "avg_dd_r": 0.46538700064620536,
+        "max_losing_streak": 2,
+        "sharpe_trade": 0.0018986124802019395,
+        "sortino_trade": 0.0044382028185114795,
+        "pct_negative_months_placeholder": NaN
+      }
+    }
+  ],
+  "oos_summary": {
+    "n": 219,
+    "win_rate": 0.5616438356164384,
+    "avg_win_r": 0.2673774172272606,
+    "avg_loss_r": -0.2908876010366191,
+    "payoff_ratio": 0.9191777727012886,
+    "expectancy_r": 0.022658505111587308,
+    "profit_factor": 1.1776965212735262,
+    "total_r": 4.96221261943762,
+    "max_dd_r": 7.093009256172605,
+    "avg_dd_r": 3.163672728549605,
+    "max_losing_streak": 5,
+    "sharpe_trade": 0.06109263706685167,
+    "sortino_trade": 0.07726213423595073,
+    "pct_negative_months_placeholder": NaN
+  },
+  "monte_carlo": {
+    "n_trades": 219,
+    "n_sims": 5000,
+    "max_dd_r": {
+      "p5": 2.377590465170351,
+      "p25": 3.326569763613831,
+      "median": 4.374784163352029,
+      "p75": 5.7726233438426595,
+      "p95": 8.848925665985796
+    },
+    "max_losing_streak": {
+      "p5": 4.0,
+      "median": 6.0,
+      "p95": 9.0
+    },
+    "total_r": {
+      "p5": -3.9682010228696902,
+      "p25": 1.3526425751798312,
+      "median": 4.994252417567674,
+      "p75": 8.652892787530057,
+      "p95": 13.949466356160894
+    },
+    "prob_dd_exceeds": {
+      "5R": 0.3696,
+      "10R": 0.0282,
+      "20R": 0.0,
+      "30R": 0.0
+    },
+    "prob_negative_total": 0.1854
+  },
+  "bootstrap_expectancy": {
+    "mean": 0.022658505111587308,
+    "ci90": [
+      -0.01811963937383421,
+      0.06369619340712737
+    ],
+    "ci95": [
+      -0.027121739142718215,
+      0.07100134837133695
+    ],
+    "prob_mean_le_0": 0.1854
+  },
+  "deflated_sharpe": 0.2884793561097868
+}
