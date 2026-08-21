@@ -52,6 +52,14 @@ def load_symbol(symbol: str, raw_dir: str | Path | None = None,
     # Use the largest file as canonical full-history source
     path = max(matches, key=lambda p: p.stat().st_size)
     df = load_parquet(path)
+    # Merge any supplementary history files (e.g. *_pre2021) for the same symbol.
+    for extra in matches:
+        if extra == path:
+            continue
+        part = load_parquet(extra)
+        df = (pd.concat([part, df], ignore_index=True)
+                .drop_duplicates(subset="ts", keep="last")
+                .sort_values("ts").reset_index(drop=True))
     if research_only:
         from src.data.holdout import filter_holdout
         df = filter_holdout(df)

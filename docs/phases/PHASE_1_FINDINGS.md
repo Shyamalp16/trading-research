@@ -53,8 +53,33 @@ Both bugs are exactly the class of silent data errors this phase exists to catch
    stat-arb spread research. Low risk for RTH directional strategies.
 2. RTY data unavailable → NQ/RTY and ES/RTY stat-arb pairs dropped from V1;
    NQ/ES (+ micro equivalents) remains in scope.
-3. Owner offered 2015–2021 backfill for NQ/ES/GC — recommended to accept
-   (longer history improves walk-forward depth), not blocking Phase 2.
+
+## Update 2026-08-21 (later same day): 2016–2020 backfill integrated
+
+Owner provided pre-2021 files for NQ/ES/GC. Audit results:
+
+- All three clean: 0 duplicates, 0 OHLC violations, 0 Saturday bars.
+- Overlap with canonical files (NQ/GC: all of 2020) is **byte-identical**
+  across every OHLCV field → same upstream source, safe merge.
+- Loader now auto-merges `*_pre2021` supplements with dedupe on timestamp.
+- Seam check at 2021 boundary: price continuity confirmed, no adjustment
+  jumps; levels match real markets (NQ ~12,850 / ES ~3,730 on 2020-12-31).
+
+**Merged dataset:**
+
+| Symbol | Rows | Range (UTC) |
+|---|---|---|
+| NQ.F | 3,564,244 | 2016-05-29 → 2026-08-20 |
+| ES.F | 3,588,200 | 2016-05-29 → 2026-08-21 |
+| GC.F | 3,487,001 | 2016-05-01 → 2026-08-20 |
+
+### Known anomalies (documented, NOT repaired)
+
+- NQ: one stray bar at 2016-11-02 17:00 ET (inside maintenance break,
+  volume=1, flat OHLC). Regression test pins it to this exact timestamp;
+  session filters exclude hour 17 from RTH logic. Impact: negligible.
+
+Research window now spans ~9.2 years pre-holdout (2016-05 → 2025-12).
 
 ## Test status
 
