@@ -115,8 +115,17 @@ def compute_events(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
                 hi, lo = float(seg_h.max()), float(seg_l.min())
                 rng = hi - lo
                 direction = float(np.sign(d_c[wcut - 1] - d_o[open_idx]))
-                broke_up = int(px > hi)
-                broke_dn = int(px < lo)
+                # Breakout flags: compare current price against the range of
+                # the window EXCLUDING the most recent bar (otherwise the
+                # current bar's own high makes a breakout impossible).
+                ref_end = min(wcut, cut - 1)
+                if ref_end > open_idx:
+                    hi_ref = float(d_h[open_idx:ref_end].max())
+                    lo_ref = float(d_l[open_idx:ref_end].min())
+                    broke_up = int(px > hi_ref)
+                    broke_dn = int(px < lo_ref)
+                else:
+                    broke_up = broke_dn = 0
                 return hi, lo, rng, direction, broke_up, broke_dn
 
             or5 = or_stats(5)

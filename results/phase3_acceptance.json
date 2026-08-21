@@ -1,0 +1,61 @@
+{
+  "experiment_id": "NQ-20260821T063958Z",
+  "dataset_versions": {
+    "futures_NQ.F_1m_pre2021.parquet": "e47d71f54d880e6d",
+    "NQ1m-2020-26.parquet": "b97893f9a2e4d70e"
+  },
+  "hypotheses_tested": 3,
+  "results": [
+    {
+      "rr_target": 1.0,
+      "n": 74,
+      "win_rate": 0.5675675675675675,
+      "avg_win_r": 0.3151791496648604,
+      "avg_loss_r": -0.33508597495089604,
+      "payoff_ratio": 0.9405918875328851,
+      "expectancy_r": 0.033983420101290025,
+      "profit_factor": 1.2345268523869117,
+      "total_r": 2.514773087495462,
+      "max_dd_r": 1.5673767446267142,
+      "avg_dd_r": 0.7478958344199307,
+      "max_losing_streak": 3,
+      "sharpe_trade": 0.08463399531466505,
+      "sortino_trade": 0.12517829765398855,
+      "pct_negative_months_placeholder": NaN
+    },
+    {
+      "rr_target": 1.5,
+      "n": 74,
+      "win_rate": 0.5675675675675675,
+      "avg_win_r": 0.3142294175067552,
+      "avg_loss_r": -0.33508597495089604,
+      "payoff_ratio": 0.9377575935632723,
+      "expectancy_r": 0.03344438293047358,
+      "profit_factor": 1.230806841551795,
+      "total_r": 2.474884336855045,
+      "max_dd_r": 1.5673767446267142,
+      "avg_dd_r": 0.7478958344199307,
+      "max_losing_streak": 3,
+      "sharpe_trade": 0.0835551812615871,
+      "sortino_trade": 0.12319274837101737,
+      "pct_negative_months_placeholder": NaN
+    },
+    {
+      "rr_target": 2.0,
+      "n": 74,
+      "win_rate": 0.5675675675675675,
+      "avg_win_r": 0.3142294175067552,
+      "avg_loss_r": -0.33508597495089604,
+      "payoff_ratio": 0.9377575935632723,
+      "expectancy_r": 0.03344438293047358,
+      "profit_factor": 1.230806841551795,
+      "total_r": 2.474884336855045,
+      "max_dd_r": 1.5673767446267142,
+      "avg_dd_r": 0.7478958344199307,
+      "max_losing_streak": 3,
+      "sharpe_trade": 0.0835551812615871,
+      "sortino_trade": 0.12319274837101737,
+      "pct_negative_months_placeholder": NaN
+    }
+  ]
+}
