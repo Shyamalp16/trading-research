@@ -97,4 +97,29 @@ whenever it happens?
 
 ---
 
+## NQ — OR30 breakout with fixed-point exits: TP 30 pts, stops 30 vs 50 (Aug 2026)
+
+Owner request: same all-session OR30 breakout, but exit at a fixed
++30 points target, testing a 30-point stop vs a 50-point stop.
+
+| Setup | Trades | Win rate | Expectancy | Verdict |
+|---|---|---|---|---|
+| Stop 30 / TP 30 (1:1) | 2,447 | 48.6% | **−0.037R** | loses |
+| Stop 50 / TP 30 (needs 62.5% WR) | 2,447 | 58.3% | **−0.014R** | loses |
+
+- The 50-pt stop does its job mechanically: win rate rises from 49% to 58%
+  because fewer trades get stopped before the +30 target. But 58% < the
+  62.5% break-even for a 30/50 payoff, so it still loses.
+- Plain language: widening the stop "fixes" the win rate but not the math —
+  you're risking 1.67 to make 1.0, and NQ's opening-range breakouts simply
+  don't pay enough per attempt to cover it.
+- Slippage makes both worse (e.g., 1:1 setup drops from −0.037R to −0.072R
+  at half-a-point slippage per fill).
+- Combined with earlier probes: three different exit logics on OR30
+  breakouts (ATR-based, structural, fixed-point) all fail after costs on
+  2016–2025 NQ. This family is now considered thoroughly tested and dead
+  unless combined with genuinely new conditioning.
+
+---
+
 (Entries are appended as research proceeds — newest at the bottom.)
