@@ -1,0 +1,36 @@
+{
+  "strategies": {
+    "NQ-004": {
+      "n": 20,
+      "win_rate": 0.95,
+      "avg_win_r": 0.24839928648472903,
+      "avg_loss_r": -0.010568696527428284,
+      "payoff_ratio": 23.50330391643603,
+      "expectancy_r": 0.23545088733412117,
+      "profit_factor": 446.5627744122845,
+      "total_r": 4.709017746682424,
+      "max_dd_r": 0.010568696527428284,
+      "avg_dd_r": 0.010568696527428284,
+      "max_losing_streak": 1,
+      "sharpe_trade": 0.774686508010748,
+      "sortino_trade": NaN,
+      "pct_negative_months_placeholder": NaN
+    },
+    "NQ-005": {
+      "n": 23,
+      "win_rate": 0.8260869565217391,
+      "avg_win_r": 0.2136311574989951,
+      "avg_loss_r": -0.0421230333736167,
+      "payoff_ratio": 5.07159955941826,
+      "expectancy_r": 0.16915216778201914,
+      "profit_factor": 24.090097907236736,
+      "total_r": 3.8904998589864404,
+      "max_dd_r": 0.061888012168457074,
+      "avg_dd_r": 0.04212303337361675,
+      "max_losing_streak": 1,
+      "sharpe_trade": 0.9419154056904385,
+      "sortino_trade": 7.306460207760814,
+      "pct_negative_months_placeholder": NaN
+    }
+  }
+}

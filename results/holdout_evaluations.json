@@ -263,6 +263,48 @@
           }
         ]
       }
+    },
+    "678c7244adb3ebfb": {
+      "evaluated_at": "2026-08-21T08:12:25.583407+00:00",
+      "result": {
+        "stats": {
+          "n": 20,
+          "win_rate": 0.95,
+          "avg_win_r": 0.24839928648472903,
+          "avg_loss_r": -0.010568696527428284,
+          "payoff_ratio": 23.50330391643603,
+          "expectancy_r": 0.23545088733412117,
+          "profit_factor": 446.5627744122845,
+          "total_r": 4.709017746682424,
+          "max_dd_r": 0.010568696527428284,
+          "avg_dd_r": 0.010568696527428284,
+          "max_losing_streak": 1,
+          "sharpe_trade": 0.774686508010748,
+          "sortino_trade": NaN,
+          "pct_negative_months_placeholder": NaN
+        }
+      }
+    },
+    "ae69169dd18fec93": {
+      "evaluated_at": "2026-08-21T08:12:25.617634+00:00",
+      "result": {
+        "stats": {
+          "n": 23,
+          "win_rate": 0.8260869565217391,
+          "avg_win_r": 0.2136311574989951,
+          "avg_loss_r": -0.0421230333736167,
+          "payoff_ratio": 5.07159955941826,
+          "expectancy_r": 0.16915216778201914,
+          "profit_factor": 24.090097907236736,
+          "total_r": 3.8904998589864404,
+          "max_dd_r": 0.061888012168457074,
+          "avg_dd_r": 0.04212303337361675,
+          "max_losing_streak": 1,
+          "sharpe_trade": 0.9419154056904385,
+          "sortino_trade": 7.306460207760814,
+          "pct_negative_months_placeholder": NaN
+        }
+      }
     }
   },
   "frozen": {
@@ -418,6 +460,84 @@
         "historical_stats_ref": "results/discovery_v1_ranking.csv#pullback_up_90"
       },
       "frozen_at": "2026-08-21T07:43:06.569236+00:00"
+    },
+    "678c7244adb3ebfb": {
+      "definition": {
+        "name": "Morning Weakness Reversal (Long)",
+        "version": "1.0.0",
+        "source_hypothesis": "discovery_v2 on_position bottom-decile",
+        "family": "overnight_range_reversion",
+        "markets": [
+          "NQ"
+        ],
+        "session_window": "signal 11:00 ET, flat by 16:00 ET",
+        "conditions": [
+          "on_position <= 0.10 at 11:00 ET (price in bottom 10% of overnight range)"
+        ],
+        "dsl": {
+          "obs_minute": 90,
+          "direction": "long",
+          "filters": [
+            [
+              "on_position",
+              "<=",
+              0.1
+            ]
+          ],
+          "stop": {
+            "type": "atr",
+            "mult": 1.0
+          },
+          "target": null,
+          "time_stop_min": null,
+          "session_exit": "15:45-16:00 ET"
+        },
+        "risk": {
+          "max_risk_per_trade_usd": 200,
+          "max_contracts": 2
+        },
+        "flatten_by_et": "16:00"
+      },
+      "frozen_at": "2026-08-21T08:11:40.559297+00:00"
+    },
+    "ae69169dd18fec93": {
+      "definition": {
+        "name": "Morning Strength Reversal (Short)",
+        "version": "1.0.0",
+        "source_hypothesis": "discovery_v2 on_position top-decile",
+        "family": "overnight_range_reversion",
+        "markets": [
+          "NQ"
+        ],
+        "session_window": "signal 11:00 ET, flat by 16:00 ET",
+        "conditions": [
+          "on_position >= 0.90 at 11:00 ET (price in top 10% of overnight range)"
+        ],
+        "dsl": {
+          "obs_minute": 90,
+          "direction": "short",
+          "filters": [
+            [
+              "on_position",
+              ">=",
+              0.9
+            ]
+          ],
+          "stop": {
+            "type": "atr",
+            "mult": 1.0
+          },
+          "target": null,
+          "time_stop_min": null,
+          "session_exit": "15:45-16:00 ET"
+        },
+        "risk": {
+          "max_risk_per_trade_usd": 200,
+          "max_contracts": 2
+        },
+        "flatten_by_et": "16:00"
+      },
+      "frozen_at": "2026-08-21T08:11:40.579354+00:00"
     }
   }
 }

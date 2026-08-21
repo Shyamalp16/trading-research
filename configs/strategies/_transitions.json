@@ -61,5 +61,33 @@
     "version_hash": "c9311b8c3842e565",
     "status": "HOLDOUT_PASSED",
     "at": "2026-08-21T07:44:03.792620+00:00"
+  },
+  {
+    "strategy_id": "NQ-004",
+    "version": "1.0.0",
+    "version_hash": "678c7244adb3ebfb",
+    "status": "VALIDATED",
+    "at": "2026-08-21T08:11:40.569253+00:00"
+  },
+  {
+    "strategy_id": "NQ-005",
+    "version": "1.0.0",
+    "version_hash": "ae69169dd18fec93",
+    "status": "VALIDATED",
+    "at": "2026-08-21T08:11:40.592179+00:00"
+  },
+  {
+    "strategy_id": "NQ-004",
+    "version": "1.0.0",
+    "version_hash": "678c7244adb3ebfb",
+    "status": "HOLDOUT_PASSED",
+    "at": "2026-08-21T08:12:25.601425+00:00"
+  },
+  {
+    "strategy_id": "NQ-005",
+    "version": "1.0.0",
+    "version_hash": "ae69169dd18fec93",
+    "status": "HOLDOUT_PASSED",
+    "at": "2026-08-21T08:12:25.625457+00:00"
   }
 ]

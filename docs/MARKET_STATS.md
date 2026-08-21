@@ -214,4 +214,59 @@ is the strongest evidence we have.
 
 ---
 
+## THE BIG ONE — Overnight-range morning reversion (Aug 2026)
+
+Discovery V2's wide-net screen found it; raw-data verification confirmed it;
+the sealed 2026 holdout validated it.
+
+### The phenomenon
+
+At 11:00 ET, look at where price sits inside the overnight range (ON low to
+ON high). The relationship with the rest of the day is strongly MONOTONIC:
+
+- Price at/below the overnight low (bottom decile) → NQ rallies into the
+  close: **+0.37% average by 15:45, ~75% win rate**
+- Price at/above the overnight high (top decile) → NQ fades into the close:
+  **−0.28% average, short wins ~67%**
+
+Plain language: when the morning selloff has pushed NQ below everything it
+traded overnight, buyers step in for the rest of the day — and vice versa.
+Morning extremes mean-revert into the close. This pattern is related to
+documented "intraday momentum/reversal" research effects.
+
+### Why we believe it
+
+1. **Independent verification**: recomputed from raw bars with zero pipeline
+   code — same result (+0.365%, 75.5% WR). (An initial "refutation" was our
+   own checker comparing 10:00 instead of 11:00 — caught and fixed.)
+2. **Positive in all 10 years** (2016–2025), including the 2022 bear market.
+3. **Threshold plateau**: works from ≤5% all the way to ≤50% of range —
+   no magic parameter. Edge degrades gracefully, never flips.
+4. **Hold-time monotonic**: longer holds capture more (12:00 +0.09% →
+   15:45 +0.37%). Not dependent on one exit trick.
+5. **Replicates on ES** almost identically.
+6. **Benign adverse excursion**: median MAE −0.19%; a 1×ATR stop almost
+   never binds (1 in 250 historical trades).
+7. **SEALED HOLDOUT 2026**: LONG side 20 trades, 95% WR, +0.24R net;
+   SHORT side 23 trades, 83% WR, +0.17R net. Both passed.
+
+### Frozen as
+
+- **NQ-004 Morning Weakness Reversal (Long)** v1.0.0
+- **NQ-005 Morning Strength Reversal (Short)** v1.0.0
+
+Rules: signal at 11:00 ET, enter next bar open, stop 1×ATR(14d), no target,
+flat by 16:00 ET. ~25 signals/side/year.
+
+### Honest caveats
+
+- Holdout samples are small (20–23 trades). Expect regression toward
+  smaller (but likely still positive) edges forward.
+- PF 446 is an artifact of a tiny losing count — do not extrapolate.
+- If this anomaly is widely known/exploited, live fills and drift may be
+  worse than history. Paper-forward tracking remains advisable before any
+  capital (owner has elected not to forward-validate for now).
+
+---
+
 (Entries are appended as research proceeds — newest at the bottom.)
