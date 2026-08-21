@@ -63,4 +63,38 @@ Rule tested: at 10:00 ET, if the latest bar pokes above the morning's
 
 ---
 
+## NQ — tracking the OR30 breakout all session long (Aug 2026)
+
+Question from the project owner: instead of checking only at a fixed time,
+what if we watch the opening range all day and take the FIRST breakout,
+whenever it happens?
+
+### What actually happens (descriptive)
+
+- **96.5% of days see an OR30 breakout before noon**, 99.2% before 15:45.
+  Plain language: waiting for the opening range to break is almost never
+  selective — nearly every day breaks one side or the other.
+- Breakouts happen FAST: median breakout time is just **36 minutes after the
+  open** (25th–75th percentile: 30–51 minutes). So "track all session" and
+  "check at 10:00" end up looking at nearly the same moments.
+- Up-first happens on ~53% of days, down-first ~45% (rest ambiguous).
+
+### Trading the first breakout (net of costs, 2016–2025)
+
+| Variant | Trades | Win rate | Expectancy | Verdict |
+|---|---|---|---|---|
+| Long breakouts, ATR stop, 1.5R target | 1,280 | 55.6% | **+0.021R** | tiny edge |
+| Short breakouts, same rules | 1,092 | 45.5% | +0.004R | nothing |
+| Structural (stop at OR mid, target other side) | 2,444 | 30.3% | −0.017R | loses |
+
+- The long-side number looks positive every-year-ish but is small and flips
+  negative in 2016/2018/2020; statistically it is roughly 1 standard error
+  from zero — **not distinguishable from luck**.
+- Plain language: the famous "opening range breakout" on NQ in 2016–2025 was
+  essentially free of edge after realistic costs. The long side drifts
+  slightly positive (consistent with NQ's general upward bias), the short
+  side earns nothing, and the wide-stop structural version loses.
+
+---
+
 (Entries are appended as research proceeds — newest at the bottom.)
