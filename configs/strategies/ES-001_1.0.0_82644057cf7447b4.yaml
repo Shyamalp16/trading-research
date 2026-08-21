@@ -1,0 +1,31 @@
+name: ES Morning Weakness Reversal Long
+version: 1.0.0
+source_hypothesis: discovery_v2 on_position extremes (widened)
+family: overnight_range_reversion
+markets:
+- ES
+session_window: signal 11:00 ET, flat by 16:00 ET
+conditions:
+- on_position <= 0.2 at 11:00 ET (price in bottom 20% of overnight range)
+dsl:
+  obs_minute: 90
+  direction: long
+  filters:
+  - - on_position
+    - <=
+    - 0.2
+  stop:
+    type: atr
+    mult: 1.0
+  target: null
+  time_stop_min: null
+  session_exit: 15:45-16:00 ET
+risk:
+  max_risk_per_trade_usd: 200
+  max_contracts: 2
+flatten_by_et: '16:00'
+holdout_note: Strict <=10%/>=90% variants passed the one-shot 2026 holdout (NQ only).
+  Widened thresholds registered WITHOUT a holdout claim to avoid multiple vault openings.
+strategy_id: ES-001
+version_hash: 82644057cf7447b4
+frozen_at: '2026-08-21T09:10:40.975664+00:00'

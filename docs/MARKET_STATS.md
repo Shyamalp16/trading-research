@@ -333,4 +333,35 @@ safely via the ES book and threshold loosening.
 
 ---
 
+## The Session-Wide Reversion Book (Aug 2026) — the frequency solution
+
+The overnight-range reversion effect is NOT an 11:00 quirk. Tested at four
+observation times (10:00, 11:00, 12:30, 13:30 ET), on NQ and ES, long AND
+short: all 16 symbol×time×direction combinations are positive in both
+train (2016–2022) and test (2023–2025).
+
+### The full book (one position at a time per symbol)
+
+- **~348 trades/year** (up from 76 — 4.5× more frequent)
+- **E[move] = +0.23 ATR per trade, 71% win rate**
+- Test period alone (2023–2025): 1,039 trades, +0.227 ATR, 69% WR
+- Positive in every single year for both symbols (range +0.18 to +0.30 ATR)
+
+### Also tested and rejected
+
+- **15:00 MOC continuation** (inverting the magic-hours "danger hour"):
+  218 signals/yr but 47% win rate, negative expectancy. The 15:00 hour
+  isn't tradable momentum either — it's just chaos.
+
+### Honest caveats
+
+- NQ and ES signals fire on the same days often (correlated markets) —
+  running both symbols doubles fees without halving risk. True
+  diversification would need uncorrelated assets (GC version is weaker).
+- Thresholds are train-period quantiles; test evaluated once. Clean.
+- Effect likely reflects institutional afternoon hedging flows; if that
+  regime changes, expect decay — monitor forward.
+
+---
+
 (Entries are appended as research proceeds — newest at the bottom.)
