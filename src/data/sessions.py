@@ -20,9 +20,13 @@ def add_session_cols(df: pd.DataFrame) -> pd.DataFrame:
     out["ts_et"] = ts_et
 
     # Globex trading day: bars from 18:00 belong to the NEXT calendar day.
-    d = ts_et.dt.normalize()
+    # Use NAIVE local time for date arithmetic: tz-aware + Timedelta is
+    # absolute-time arithmetic and shifts dates across DST transitions.
+    d_naive = ts_et.dt.tz_localize(None).dt.normalize()
     is_evening = ts_et.dt.hour >= 18
-    out["trade_date"] = d + pd.to_timedelta(is_evening.astype(int), unit="D")
+    out["trade_date"] = (
+        d_naive + pd.to_timedelta(is_evening.astype(int), unit="D")
+    ).dt.tz_localize(ET, nonexistent="shift_forward", ambiguous="NaT")
 
     hour = ts_et.dt.hour + ts_et.dt.minute / 60.0
     minutes = ts_et.dt.hour * 60 + ts_et.dt.minute
