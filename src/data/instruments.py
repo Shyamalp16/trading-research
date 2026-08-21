@@ -28,6 +28,13 @@ INSTRUMENTS = {
         eth_open="18:00", maintenance_break=("17:00", "18:00"),
         micro="MNQ",
     ),
+    "ES": InstrumentSpec(
+        symbol="ES", name="E-mini S&P 500", exchange="CME",
+        tick_size=0.25, tick_value=12.5, multiplier=50.0,
+        rth_open="09:30", rth_close="16:00",
+        eth_open="18:00", maintenance_break=("17:00", "18:00"),
+        micro="MES",
+    ),
     "GC": InstrumentSpec(
         symbol="GC", name="Gold", exchange="COMEX",
         tick_size=0.10, tick_value=10.0, multiplier=100.0,

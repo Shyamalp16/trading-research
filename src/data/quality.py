@@ -78,7 +78,7 @@ def main():
         "Scope: raw 1-minute continuous-contract bars. No repairs applied.",
         "",
     ]
-    for sym in ["NQ", "GC"]:
+    for sym in ["NQ", "ES", "GC"]:
         df = load_symbol(sym)
         res = analyze(df, sym)
         report["symbols"][sym] = res

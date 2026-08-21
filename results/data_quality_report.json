@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T05:34:51.163531+00:00",
+  "generated_at": "2026-08-21T05:46:24.872667+00:00",
   "symbols": {
     "NQ": {
       "name": "NQ",
@@ -33,6 +33,37 @@
         "2024": 172026,
         "2025": 174551,
         "2026": 108534
+      }
+    },
+    "ES": {
+      "name": "ES",
+      "rows": 1992152,
+      "start_utc": "2021-01-03 23:00:00+00:00",
+      "end_utc": "2026-08-21 04:58:00+00:00",
+      "duplicate_timestamps": 0,
+      "monotonic": true,
+      "ohlc_violations": 0,
+      "zero_volume_bars": 0,
+      "stale_zero_vol_bars": 0,
+      "nonpositive_prices": 0,
+      "expected_minutes": 2959559,
+      "missing_minutes": 967407,
+      "missing_pct": 32.69,
+      "gaps_over_60min": 1460,
+      "weekend_bars_sat": 0,
+      "weekend_bars_sun": 104328,
+      "trading_days": 1756,
+      "short_sessions_lt300bars": {
+        "2025-11-28": 278,
+        "2026-08-21": 59
+      },
+      "missing_by_year": {
+        "2021": 168122,
+        "2022": 171547,
+        "2023": 172410,
+        "2024": 172222,
+        "2025": 174575,
+        "2026": 108531
       }
     },
     "GC": {

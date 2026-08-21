@@ -34,16 +34,28 @@ def load_parquet(path: str | Path) -> pd.DataFrame:
     return _normalize(pd.read_parquet(path))
 
 
-def load_symbol(symbol: str, raw_dir: str | Path | None = None) -> pd.DataFrame:
-    """Load the canonical 1m dataset for a continuous symbol (e.g. 'NQ', 'GC')."""
+def load_symbol(symbol: str, raw_dir: str | Path | None = None,
+                research_only: bool = False) -> pd.DataFrame:
+    """Load the canonical 1m dataset for a continuous symbol (e.g. 'NQ', 'ES', 'GC').
+
+    research_only=True strips the sealed holdout period (see src/data/holdout.py).
+    """
     raw = Path(raw_dir) if raw_dir else RAW_DIR
-    matches = sorted(raw.glob(f"*{symbol}*.parquet"))
-    matches = [m for m in matches if not m.name.startswith("duplicate_")]
+    import re
+    # Precise token match: 'NQ' must appear as a path token, not inside a word
+    # (Windows globbing is case-insensitive: '*ES*' would match 'futures_GC').
+    pat = re.compile(rf"(?:^|[_\-]){re.escape(symbol)}(?=[_\-.\d])", re.IGNORECASE)
+    matches = [m for m in raw.glob("*.parquet")
+               if not m.name.startswith("duplicate_") and pat.search(m.stem)]
     if not matches:
         raise FileNotFoundError(f"No parquet found for symbol {symbol} in {raw}")
     # Use the largest file as canonical full-history source
     path = max(matches, key=lambda p: p.stat().st_size)
-    return load_parquet(path)
+    df = load_parquet(path)
+    if research_only:
+        from src.data.holdout import filter_holdout
+        df = filter_holdout(df)
+    return df
 
 
 def dataset_version(path: str | Path) -> dict:

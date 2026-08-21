@@ -71,3 +71,21 @@ def test_dst_transition_days_have_single_trade_date(nq):
     dates = sample.trade_date.dt.tz_localize(None).dt.date
     for d in dates.unique():
         assert sample[dates == d].trade_date.nunique() == 1
+
+
+def test_holdout_vault():
+    from src.data.loaders import load_symbol
+    from src.data.holdout import filter_holdout, assert_not_holdout
+    df = load_symbol("NQ", research_only=True)
+    assert df.ts.max() < pd.Timestamp("2026-01-01", tz="UTC")
+    full = load_symbol("NQ")
+    assert len(full) > len(df)
+    with pytest.raises(ValueError):
+        assert_not_holdout(full)
+
+
+def test_symbol_loader_precision():
+    from src.data.loaders import load_symbol
+    es = load_symbol("ES")
+    assert es.symbol.unique().tolist() == ["ES.F"]
+    assert len(es) < 2_100_000  # GC row count would indicate the old glob bug
