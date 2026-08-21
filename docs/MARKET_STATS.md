@@ -304,4 +304,33 @@ All variants keep positive expectancy; Magic Hours cannot say the same.
 
 ---
 
+## Owner's Magic-Hours variant: sweep + reclaim + limit entry (Aug 2026)
+
+Owner redesigned the Magic Hours system to fix the flaws found above:
+(1) mark the hourly range, (2) wait for a sweep beyond it, (3) require a
+5-minute close back INSIDE the range, (4) enter by LIMIT at the boundary,
+(5) target the midpoint.
+
+### Result: it fixes the sign, not the size
+
+- The reclaim confirmation + limit entry flips expectancy from negative to
+  positive across nearly all hours — the design genuinely works as intended.
+- But the magnitude is tiny: best cells (NQ hour 8 with a 75%-of-range stop)
+  earn **+0.034 range units ≈ +1.2 NQ points per trade**, while round-trip
+  costs are ~3 points. Every tested hour is at or below breakeven after
+  costs (hour 7: +0.6 pts gross vs 3 pts cost; hour 0: +0.3 vs 3).
+- Median adverse excursion stays ~46% of range — winners still give back
+  almost their entire profit in heat before paying out.
+
+### Plain language
+
+The owner's version turns a trap into a coin flip with extra steps. The
+reclaim filter removes the worst losses but also removes many of the big
+winners, leaving an edge thinner than transaction costs. Meanwhile our own
+overnight-reversion anomaly earns ~100+ points per trade at 11:00 ET —
+roughly 50–100× more per signal — and its frequency can be scaled 2–4×
+safely via the ES book and threshold loosening.
+
+---
+
 (Entries are appended as research proceeds — newest at the bottom.)
