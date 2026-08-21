@@ -1,0 +1,35 @@
+name: PDH Acceptance Continuation
+version: 1.0.0
+source_hypothesis: pdh_accept_90
+family: levels
+markets:
+- NQ
+session_window: 09:30-12:00 ET (obs 09:30+90m)
+conditions:
+- price > previous day high at 11:00 ET
+- ret_5m > 0
+dsl:
+  obs_minute: 90
+  direction: long
+  filters:
+  - - px_vs_pdh
+    - ==
+    - 1
+  - - ret_5m
+    - '>'
+    - 0
+  stop:
+    type: atr
+    mult: 1.0
+  target:
+    type: rr
+    rr: 1.5
+  time_stop_min: 240
+risk:
+  max_risk_per_trade_usd: 200
+  max_contracts: 2
+flatten_by_et: '16:00'
+historical_stats_ref: results/discovery_v1_ranking.csv#pdh_accept_90
+strategy_id: NQ-001
+version_hash: d460cda6b1470802
+frozen_at: '2026-08-21T07:43:06.524490+00:00'

@@ -32,9 +32,15 @@ class ExperimentLog:
         self.ids.append(hypothesis_id(hyp))
 
 
-def load_events(symbol: str) -> tuple[pd.DataFrame, pd.DataFrame]:
+def load_events(symbol: str, research_only: bool = True) -> tuple[pd.DataFrame, pd.DataFrame]:
     f = pd.read_parquet(PROCESSED / f"{symbol}_events_features.parquet")
     o = pd.read_parquet(PROCESSED / f"{symbol}_events_outcomes.parquet")
+    if research_only:
+        from src.data.holdout import HOLDOUT_START
+        td = pd.to_datetime(f["trade_date"]).dt.tz_localize(None)
+        f = f[td < pd.Timestamp(HOLDOUT_START.tz_localize(None))]
+        o = o[o.set_index(["trade_date", "obs_minute"]).index.isin(
+            f.set_index(["trade_date", "obs_minute"]).index)]
     return f, o
 
 

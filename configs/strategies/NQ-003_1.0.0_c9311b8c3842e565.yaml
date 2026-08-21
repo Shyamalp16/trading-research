@@ -1,0 +1,40 @@
+name: Trend Pullback to VWAP
+version: 1.0.0
+source_hypothesis: pullback_up_90
+family: pullback
+markets:
+- NQ
+session_window: 09:30-12:00 ET (obs 11:00)
+conditions:
+- ret_30m > 0.001
+- distance to VWAP between -0.6 and +0.1 ATR
+- price above VWAP at 11:00 ET
+dsl:
+  obs_minute: 90
+  direction: long
+  filters:
+  - - ret_30m
+    - '>'
+    - 0.001
+  - - d_vwap
+    - between
+    - - -0.6
+      - 0.1
+  - - above_vwap
+    - ==
+    - 1
+  stop:
+    type: atr
+    mult: 1.0
+  target:
+    type: rr
+    rr: 1.5
+  time_stop_min: 240
+risk:
+  max_risk_per_trade_usd: 200
+  max_contracts: 2
+flatten_by_et: '16:00'
+historical_stats_ref: results/discovery_v1_ranking.csv#pullback_up_90
+strategy_id: NQ-003
+version_hash: c9311b8c3842e565
+frozen_at: '2026-08-21T07:43:06.557321+00:00'

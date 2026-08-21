@@ -1,0 +1,423 @@
+{
+  "evaluations": {
+    "d460cda6b1470802": {
+      "evaluated_at": "2026-08-21T07:44:03.714425+00:00",
+      "result": {
+        "stats": {
+          "n": 38,
+          "win_rate": 0.6578947368421053,
+          "avg_win_r": 0.1908217101085249,
+          "avg_loss_r": -0.324877857484301,
+          "payoff_ratio": 0.5873644685610682,
+          "expectancy_r": 0.014398173826768655,
+          "profit_factor": 1.129547054925131,
+          "total_r": 0.5471306054172089,
+          "max_dd_r": 2.3615297842664615,
+          "avg_dd_r": 1.2437295115791072,
+          "max_losing_streak": 3,
+          "sharpe_trade": 0.044665529078759515,
+          "sortino_trade": 0.05231168853029349,
+          "pct_negative_months_placeholder": NaN
+        },
+        "trades_preview": [
+          {
+            "entry": 25812.25,
+            "exit": 25953.75,
+            "stop_price": 25549.375,
+            "target_price": 26206.5625,
+            "r_multiple_gross": 0.5382786495482644,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-09 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 262.875,
+            "r_net": 0.5354255825011889
+          },
+          {
+            "entry": 25884.75,
+            "exit": 25741.75,
+            "stop_price": 25615.214285714286,
+            "target_price": 26289.053571428572,
+            "r_multiple_gross": -0.5305419371935869,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-15 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 269.5357142857143,
+            "r_net": -0.5333244998012455
+          },
+          {
+            "entry": 25826.75,
+            "exit": 25742.75,
+            "stop_price": 25497.035714285714,
+            "target_price": 26321.321428571428,
+            "r_multiple_gross": -0.25476603119584057,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-23 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 329.7142857142857,
+            "r_net": -0.2570407279029463
+          },
+          {
+            "entry": 26078.75,
+            "exit": 26093.25,
+            "stop_price": 25753.23214285714,
+            "target_price": 26567.026785714286,
+            "r_multiple_gross": 0.04454440726315212,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-27 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 325.51785714285717,
+            "r_net": 0.042240386197816664
+          },
+          {
+            "entry": 25311.75,
+            "exit": 25401.75,
+            "stop_price": 24881.089285714286,
+            "target_price": 25957.741071428572,
+            "r_multiple_gross": 0.20898121656922503,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-02-09 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 430.6607142857143,
+            "r_net": 0.20723970643114814
+          }
+        ]
+      }
+    },
+    "34eba879b4fad2c1": {
+      "evaluated_at": "2026-08-21T07:44:03.745240+00:00",
+      "result": {
+        "stats": {
+          "n": 23,
+          "win_rate": 0.5652173913043478,
+          "avg_win_r": 0.27873675269363296,
+          "avg_loss_r": -0.34224336733443034,
+          "payoff_ratio": 0.8144401887597706,
+          "expectancy_r": 0.008745396159692427,
+          "profit_factor": 1.058772245387702,
+          "total_r": 0.2011441116729258,
+          "max_dd_r": 1.7100564309205315,
+          "avg_dd_r": 1.2228604629396724,
+          "max_losing_streak": 2,
+          "sharpe_trade": 0.02261709888571331,
+          "sortino_trade": 0.029539139345512094,
+          "pct_negative_months_placeholder": NaN
+        },
+        "trades_preview": [
+          {
+            "entry": 25901.75,
+            "exit": 25972.5,
+            "stop_price": 25649.660714285714,
+            "target_price": 26279.883928571428,
+            "r_multiple_gross": 0.28065452999929164,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-12 00:00:00-05:00",
+            "obs_minute": 30,
+            "stop_points": 252.08928571428572,
+            "r_net": 0.2776793936388751
+          },
+          {
+            "entry": 25316.25,
+            "exit": 25397.75,
+            "stop_price": 25017.660714285714,
+            "target_price": 25764.133928571428,
+            "r_multiple_gross": 0.2729501824053585,
+            "exit_reason": "session_end",
+            "hold_min": 179,
+            "trade_date": "2026-01-19 00:00:00-05:00",
+            "obs_minute": 30,
+            "stop_points": 298.5892857142857,
+            "r_net": 0.27043837091083067
+          },
+          {
+            "entry": 25322.0,
+            "exit": 25220.5,
+            "stop_price": 25007.035714285714,
+            "target_price": 25794.446428571428,
+            "r_multiple_gross": -0.32225875949654154,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-20 00:00:00-05:00",
+            "obs_minute": 30,
+            "stop_points": 314.9642857142857,
+            "r_net": -0.32463998185735343
+          },
+          {
+            "entry": 25747.0,
+            "exit": 25936.5,
+            "stop_price": 25391.60714285714,
+            "target_price": 26280.089285714286,
+            "r_multiple_gross": 0.5332127424379459,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-02-02 00:00:00-05:00",
+            "obs_minute": 30,
+            "stop_points": 355.39285714285717,
+            "r_net": 0.5311024017686664
+          },
+          {
+            "entry": 24900.75,
+            "exit": 25105.0,
+            "stop_price": 24456.785714285714,
+            "target_price": 25566.696428571428,
+            "r_multiple_gross": 0.4600595285978602,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-02-20 00:00:00-05:00",
+            "obs_minute": 30,
+            "stop_points": 443.9642857142857,
+            "r_net": 0.4583702035234494
+          }
+        ]
+      }
+    },
+    "c9311b8c3842e565": {
+      "evaluated_at": "2026-08-21T07:44:03.782824+00:00",
+      "result": {
+        "stats": {
+          "n": 54,
+          "win_rate": 0.5740740740740741,
+          "avg_win_r": 0.23184495482237216,
+          "avg_loss_r": -0.28655941777973803,
+          "payoff_ratio": 0.8090641606501945,
+          "expectancy_r": 0.011043092417769676,
+          "profit_factor": 1.0904777817459141,
+          "total_r": 0.5963269905595625,
+          "max_dd_r": 2.1097505575041224,
+          "avg_dd_r": 0.8853554725519501,
+          "max_losing_streak": 3,
+          "sharpe_trade": 0.03361380680199309,
+          "sortino_trade": 0.04189153062797471,
+          "pct_negative_months_placeholder": NaN
+        },
+        "trades_preview": [
+          {
+            "entry": 25905.75,
+            "exit": 25902.75,
+            "stop_price": 25618.51785714286,
+            "target_price": 26336.598214285714,
+            "r_multiple_gross": -0.010444513521914828,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-07 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 287.23214285714283,
+            "r_net": -0.013055641902393535
+          },
+          {
+            "entry": 25470.0,
+            "exit": 25620.0,
+            "stop_price": 25140.303571428572,
+            "target_price": 25964.54464285714,
+            "r_multiple_gross": 0.45496398201809024,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-21 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 329.69642857142856,
+            "r_net": 0.4526891621079998
+          },
+          {
+            "entry": 25826.75,
+            "exit": 25742.75,
+            "stop_price": 25497.035714285714,
+            "target_price": 26321.321428571428,
+            "r_multiple_gross": -0.25476603119584057,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-23 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 329.7142857142857,
+            "r_net": -0.2570407279029463
+          },
+          {
+            "entry": 25881.25,
+            "exit": 25879.25,
+            "stop_price": 25554.39285714286,
+            "target_price": 26371.535714285714,
+            "r_multiple_gross": -0.006118881118881119,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-26 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 326.85714285714283,
+            "r_net": -0.00841346153846154
+          },
+          {
+            "entry": 26078.75,
+            "exit": 26093.25,
+            "stop_price": 25753.23214285714,
+            "target_price": 26567.026785714286,
+            "r_multiple_gross": 0.04454440726315212,
+            "exit_reason": "time",
+            "hold_min": 240,
+            "trade_date": "2026-01-27 00:00:00-05:00",
+            "obs_minute": 90,
+            "stop_points": 325.51785714285717,
+            "r_net": 0.042240386197816664
+          }
+        ]
+      }
+    }
+  },
+  "frozen": {
+    "d460cda6b1470802": {
+      "definition": {
+        "name": "PDH Acceptance Continuation",
+        "version": "1.0.0",
+        "source_hypothesis": "pdh_accept_90",
+        "family": "levels",
+        "markets": [
+          "NQ"
+        ],
+        "session_window": "09:30-12:00 ET (obs 09:30+90m)",
+        "conditions": [
+          "price > previous day high at 11:00 ET",
+          "ret_5m > 0"
+        ],
+        "dsl": {
+          "obs_minute": 90,
+          "direction": "long",
+          "filters": [
+            [
+              "px_vs_pdh",
+              "==",
+              1
+            ],
+            [
+              "ret_5m",
+              ">",
+              0
+            ]
+          ],
+          "stop": {
+            "type": "atr",
+            "mult": 1.0
+          },
+          "target": {
+            "type": "rr",
+            "rr": 1.5
+          },
+          "time_stop_min": 240
+        },
+        "risk": {
+          "max_risk_per_trade_usd": 200,
+          "max_contracts": 2
+        },
+        "flatten_by_et": "16:00",
+        "historical_stats_ref": "results/discovery_v1_ranking.csv#pdh_accept_90"
+      },
+      "frozen_at": "2026-08-21T07:43:06.525493+00:00"
+    },
+    "34eba879b4fad2c1": {
+      "definition": {
+        "name": "Gap-Down VWAP Reclaim Reversal",
+        "version": "1.0.0",
+        "source_hypothesis": "gap_rev_dn_g0.3_30",
+        "family": "gap",
+        "markets": [
+          "NQ"
+        ],
+        "session_window": "09:30-12:00 ET (obs 10:00)",
+        "conditions": [
+          "opening gap < -0.3 ATR",
+          "price above VWAP at 10:00 ET"
+        ],
+        "dsl": {
+          "obs_minute": 30,
+          "direction": "long",
+          "filters": [
+            [
+              "gap_atr",
+              "<",
+              -0.3
+            ],
+            [
+              "above_vwap",
+              "==",
+              1
+            ]
+          ],
+          "stop": {
+            "type": "atr",
+            "mult": 1.0
+          },
+          "target": {
+            "type": "rr",
+            "rr": 1.5
+          },
+          "time_stop_min": 240
+        },
+        "risk": {
+          "max_risk_per_trade_usd": 200,
+          "max_contracts": 2
+        },
+        "flatten_by_et": "16:00",
+        "historical_stats_ref": "results/discovery_v1_ranking.csv#gap_rev_dn_g0.3_30"
+      },
+      "frozen_at": "2026-08-21T07:43:06.547653+00:00"
+    },
+    "c9311b8c3842e565": {
+      "definition": {
+        "name": "Trend Pullback to VWAP",
+        "version": "1.0.0",
+        "source_hypothesis": "pullback_up_90",
+        "family": "pullback",
+        "markets": [
+          "NQ"
+        ],
+        "session_window": "09:30-12:00 ET (obs 11:00)",
+        "conditions": [
+          "ret_30m > 0.001",
+          "distance to VWAP between -0.6 and +0.1 ATR",
+          "price above VWAP at 11:00 ET"
+        ],
+        "dsl": {
+          "obs_minute": 90,
+          "direction": "long",
+          "filters": [
+            [
+              "ret_30m",
+              ">",
+              0.001
+            ],
+            [
+              "d_vwap",
+              "between",
+              [
+                -0.6,
+                0.1
+              ]
+            ],
+            [
+              "above_vwap",
+              "==",
+              1
+            ]
+          ],
+          "stop": {
+            "type": "atr",
+            "mult": 1.0
+          },
+          "target": {
+            "type": "rr",
+            "rr": 1.5
+          },
+          "time_stop_min": 240
+        },
+        "risk": {
+          "max_risk_per_trade_usd": 200,
+          "max_contracts": 2
+        },
+        "flatten_by_et": "16:00",
+        "historical_stats_ref": "results/discovery_v1_ranking.csv#pullback_up_90"
+      },
+      "frozen_at": "2026-08-21T07:43:06.569236+00:00"
+    }
+  }
+}

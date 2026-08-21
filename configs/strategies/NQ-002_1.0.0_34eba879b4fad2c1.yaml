@@ -1,0 +1,35 @@
+name: Gap-Down VWAP Reclaim Reversal
+version: 1.0.0
+source_hypothesis: gap_rev_dn_g0.3_30
+family: gap
+markets:
+- NQ
+session_window: 09:30-12:00 ET (obs 10:00)
+conditions:
+- opening gap < -0.3 ATR
+- price above VWAP at 10:00 ET
+dsl:
+  obs_minute: 30
+  direction: long
+  filters:
+  - - gap_atr
+    - <
+    - -0.3
+  - - above_vwap
+    - ==
+    - 1
+  stop:
+    type: atr
+    mult: 1.0
+  target:
+    type: rr
+    rr: 1.5
+  time_stop_min: 240
+risk:
+  max_risk_per_trade_usd: 200
+  max_contracts: 2
+flatten_by_et: '16:00'
+historical_stats_ref: results/discovery_v1_ranking.csv#gap_rev_dn_g0.3_30
+strategy_id: NQ-002
+version_hash: 34eba879b4fad2c1
+frozen_at: '2026-08-21T07:43:06.533980+00:00'

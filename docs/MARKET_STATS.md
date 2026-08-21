@@ -196,4 +196,22 @@ flat-everywhere-with-a-good-center, not a fragile spike.
 
 ---
 
+## HOLDOUT VERDICT (Aug 2026) — the 2026 vault, opened once
+
+The three surviving strategies were frozen into versioned definitions and
+then evaluated ONCE on 2026 data they had never touched:
+
+- **NQ-001 PDH Acceptance**: 38 trades, 65.8% win rate, +0.014R ✓
+- **NQ-002 Gap-Down Reclaim**: 23 trades, 56.5% win rate, +0.009R ✓
+- **NQ-003 VWAP Pullback**: 54 trades, 57.4% win rate, +0.011R ✓
+
+Plain language: three independently-discovered patterns all made money on
+data the research process never saw. The edges shrank from ~+0.03R
+in-sample to ~+0.01R out-of-sample — normal decay, and a reminder these
+are small, grind-it-out edges, not gold mines. Individually each sample is
+too small for statistical certainty; the fact that all three agree in sign
+is the strongest evidence we have.
+
+---
+
 (Entries are appended as research proceeds — newest at the bottom.)

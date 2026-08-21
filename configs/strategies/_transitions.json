@@ -1,0 +1,65 @@
+[
+  {
+    "strategy_id": "NQ-001",
+    "version": "1.0.0",
+    "version_hash": "d460cda6b1470802",
+    "status": "VALIDATED",
+    "at": "2026-08-21T07:42:11.600697+00:00"
+  },
+  {
+    "strategy_id": "NQ-002",
+    "version": "1.0.0",
+    "version_hash": "34eba879b4fad2c1",
+    "status": "VALIDATED",
+    "at": "2026-08-21T07:42:11.616075+00:00"
+  },
+  {
+    "strategy_id": "NQ-003",
+    "version": "1.0.0",
+    "version_hash": "c9311b8c3842e565",
+    "status": "VALIDATED",
+    "at": "2026-08-21T07:42:11.624816+00:00"
+  },
+  {
+    "strategy_id": "NQ-001",
+    "version": "1.0.0",
+    "version_hash": "d460cda6b1470802",
+    "status": "VALIDATED",
+    "at": "2026-08-21T07:43:06.533980+00:00"
+  },
+  {
+    "strategy_id": "NQ-002",
+    "version": "1.0.0",
+    "version_hash": "34eba879b4fad2c1",
+    "status": "VALIDATED",
+    "at": "2026-08-21T07:43:06.556181+00:00"
+  },
+  {
+    "strategy_id": "NQ-003",
+    "version": "1.0.0",
+    "version_hash": "c9311b8c3842e565",
+    "status": "VALIDATED",
+    "at": "2026-08-21T07:43:06.575310+00:00"
+  },
+  {
+    "strategy_id": "NQ-001",
+    "version": "1.0.0",
+    "version_hash": "d460cda6b1470802",
+    "status": "HOLDOUT_PASSED",
+    "at": "2026-08-21T07:44:03.729037+00:00"
+  },
+  {
+    "strategy_id": "NQ-002",
+    "version": "1.0.0",
+    "version_hash": "34eba879b4fad2c1",
+    "status": "HOLDOUT_PASSED",
+    "at": "2026-08-21T07:44:03.754155+00:00"
+  },
+  {
+    "strategy_id": "NQ-003",
+    "version": "1.0.0",
+    "version_hash": "c9311b8c3842e565",
+    "status": "HOLDOUT_PASSED",
+    "at": "2026-08-21T07:44:03.792620+00:00"
+  }
+]
