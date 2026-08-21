@@ -269,4 +269,39 @@ flat by 16:00 ET. ~25 signals/side/year.
 
 ---
 
+## "Magic Hours" report verdict (Aug 2026) — real stats, untradeable strategy
+
+Owner shared a viral study claiming 78–83% win rates fading breakouts of
+specific hourly ranges (07:00 ET best for NQ/ES). We replicated it
+independently on our data.
+
+### What checked out
+
+- Win rates replicate almost exactly: NQ 07:00 → 82.9% (theirs 83.4%);
+  GC 06:00 → 79.6% (79.3%); even the "danger hour" 15:00 → 23.4% (22.4%).
+- The reversion phenomenon is genuine: breakouts of these hourly ranges
+  usually do come back to the range midpoint within 3 hours.
+
+### What breaks
+
+- The median winning trade goes **53% of the range AGAINST the position**
+  before reverting (their own MAE stat, easily missed).
+- With any sane stop (≤1.5× range), expectancy is ZERO TO NEGATIVE:
+  stop 0.5× → −0.018, 0.75× → −0.021, 1.0× → −0.025 range units.
+- It only turns positive with a 3× range stop (+0.137) — where one loss
+  costs 6× the average win and a single contract risks $3–5k.
+- Plain language: it's a coin-flip business wearing an 83%-win-rate costume.
+  The high win rate is funded by catastrophic tail risk.
+
+### The actual fix for low trade frequency
+
+Our overnight-range reversion anomaly has a MONOTONIC threshold plateau,
+so frequency can be bought cheaply:
+- Add the ES book (pattern already verified there): 76 → ~141 trades/yr
+- Loosen thresholds to ≤20%/≥80%: ~207/yr at +0.27 ATR, 75% WR
+- Loosen further to ≤30%/≥70%: ~295/yr at +0.22 ATR, 68% WR
+All variants keep positive expectancy; Magic Hours cannot say the same.
+
+---
+
 (Entries are appended as research proceeds — newest at the bottom.)
