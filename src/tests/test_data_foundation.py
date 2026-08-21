@@ -38,9 +38,11 @@ def test_session_columns(nq):
     df = add_session_cols(nq.head(100_000))
     # evening bars (>=18:00 ET) belong to next trade date
     ev = df[df.ts_et.dt.hour >= 18]
-    assert (ev.trade_date == ev.ts_et.dt.normalize() + pd.Timedelta(days=1)).all()
+    ev_naive = ev.ts_et.dt.tz_localize(None)
+    assert (ev.trade_date.dt.tz_localize(None) == ev_naive.dt.normalize() + pd.Timedelta(days=1)).all()
     day = df[(df.ts_et.dt.hour >= 0) & (df.ts_et.dt.hour < 17)]
-    assert (day.trade_date == day.ts_et.dt.normalize()).all()
+    day_naive = day.ts_et.dt.tz_localize(None)
+    assert (day.trade_date.dt.tz_localize(None) == day_naive.dt.normalize()).all()
 
 
 def test_daily_sessions_shape(nq):
@@ -60,8 +62,12 @@ def test_daily_sessions_shape(nq):
 
 
 def test_dst_transition_days_have_single_trade_date(nq):
-    """US DST 2024: Mar 10 (spring fwd), Nov 3 (fall back)."""
+    """US DST 2024: Mar 10 (spring fwd), Nov 3 (fall back).
+
+    All bars of one calendar date must map to ONE identical trade_date
+    timestamp (same wall date AND same offset).
+    """
     sample = add_session_cols(nq[(nq.ts >= "2024-03-09") & (nq.ts <= "2024-03-12")])
     dates = sample.trade_date.dt.tz_localize(None).dt.date
-    counts = dates.value_counts()
-    assert (counts == 1).all()
+    for d in dates.unique():
+        assert sample[dates == d].trade_date.nunique() == 1
